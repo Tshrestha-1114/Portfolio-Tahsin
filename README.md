@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Open https://portfolio-tahsin-nine.vercel.app/
 
 ## All Content Lives in One File
 
