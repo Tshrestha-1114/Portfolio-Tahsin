@@ -111,10 +111,13 @@ export function Extracurriculars() {
 }
 
 export function Contact() {
+  const personalEmail = "shrestha.official.2407@gmail.com";
+
   const links = [
-    { href: personalInfo.github, icon: <GitFork size={20} />, label: "GitHub", sub: "yourusername" },
-    { href: personalInfo.linkedin, icon: <Link2 size={20} />, label: "LinkedIn", sub: "yourusername" },
-    { href: `mailto:${personalInfo.email}`, icon: <Mail size={20} />, label: "Email", sub: personalInfo.email },
+    { href: personalInfo.github, icon: <GitFork size={20} />, label: "GitHub", sub: "Tshrestha-1114" },
+    { href: personalInfo.linkedin, icon: <Link2 size={20} />, label: "LinkedIn", sub: "tahsin-nayeem-shrestha" },
+    { href: `mailto:${personalEmail}`, icon: <Mail size={20} />, label: "Email", sub: personalEmail },
+    { href: `mailto:${personalInfo.email}`, icon: <Mail size={20} />, label: "University Email", sub: personalInfo.email },
     { href: personalInfo.resume, icon: <FileText size={20} />, label: "Resume", sub: "Download PDF" },
   ];
 
@@ -194,7 +197,7 @@ export function Contact() {
                   <p style={{ fontFamily: "var(--font-body)", fontWeight: 500, marginBottom: "0.2rem" }}>
                     {link.label}
                   </p>
-                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "rgba(247, 245, 240, 0.45)" }}>
+                  <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", color: "rgba(247, 245, 240, 0.45)", wordBreak: "break-all" }}>
                     {link.sub}
                   </p>
                 </div>
