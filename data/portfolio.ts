@@ -200,7 +200,7 @@ export const projects = [
     ],
     architecture:
       "Raw ticket text ingested from TDX → preprocessing → GPT-4/Claude agentic reasoning chain (classify, summarize, detect anomalies) → structured output to PostgreSQL → reporting layer.",
-    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
+    github: null,
     demo: null,
     featured: true,
   },
@@ -243,7 +243,7 @@ export const projects = [
     ],
     architecture:
       "Census data in S3 → ETL with Pandas → model training (regression, RF, NN) → predictions indexed to Elasticsearch → recommendations report to KPMG policy team.",
-    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
+    github: null,
     demo: null,
     featured: true,
   },
@@ -263,7 +263,7 @@ export const projects = [
     ],
     architecture:
       "Data pipeline scrapes job listings and course catalogs → feature engineering → skill gap model → MongoDB storage → web interface for student queries.",
-    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
+    github: null,
     demo: null,
     featured: true,
   },
@@ -284,8 +284,8 @@ export const projects = [
     ],
     architecture:
       "External ticket sources → REST API integrations → Cloudflare Workers processing at the edge → aggregation and pattern analysis → low-latency response to clients.",
-    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
-    demo: null,
+    github: "https://github.com/Tshrestha-1114/cloudflare-tickets-aggregator-and-analyzer",
+    demo: "https://sweet-morning-dc78.shresthapmcloudflare.workers.dev/",
     featured: false,
   },
   {
@@ -305,7 +305,7 @@ export const projects = [
     ],
     architecture:
       "Transaction data → MySQL with complex SQL queries for rule-based flagging → ML model layer for pattern detection → alert system → monitoring dashboard.",
-    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
+    github: "https://github.com/Tshrestha-1114/Bank_Fraud_Detection_SQL",
     demo: null,
     featured: true,
   },
@@ -325,7 +325,7 @@ export const projects = [
     ],
     architecture:
       "PCAP file ingestion → packet parsing → flow extraction → per-protocol stat computation → report output.",
-    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
+    github: null,
     demo: null,
     featured: false,
   },
