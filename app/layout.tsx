@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tahsin Nayeem Shrestha — Software Engineer & AI Builder",
     description: "Portfolio of AI systems, engineering projects, and studio art.",
-    url: "https://tahsin.dev",
+    url: "https://portfolio-tahsin-nine.vercel.app",
     siteName: "Tahsin Nayeem Shrestha",
   },
 };
