@@ -1,24 +1,24 @@
 export const personalInfo = {
   name: "Tahsin Nayeem Shrestha",
   tagline: "Software Engineer & AI Builder",
-  bio: "I build systems that think. At the intersection of AI engineering, backend infrastructure, and data pipelines — with a Studio Arts minor that taught me to see the structure inside the chaos.",
-  longBio: `I'm a Software Engineer and AI practitioner completing my B.S. in Information Systems Engineering at Stony Brook University, where I also pursued a Studio Arts minor. That pairing wasn't accidental. Studying art taught me something engineering school couldn't: how to hold ambiguity, find pattern in noise, and communicate invisible systems through visible form.
+  bio: "I build systems end to end, from architecture and system design through implementation and deployment. AI engineering, backend infrastructure, and data pipelines, with a Studio Arts minor that taught me to see the structure inside the chaos.",
+  longBio: `I'm a Software Engineer and AI practitioner who builds complete systems rather than isolated features. I completed my B.S. in Information Systems Engineering at Stony Brook University in May 2026, where I also earned a Studio Arts minor. That pairing wasn't accidental. Studying art taught me something engineering school couldn't: how to hold ambiguity, find pattern in noise, and communicate invisible systems through visible form.
 
-My work spans LLM-powered automation pipelines, machine learning models at scale, and backend data infrastructure. At KPMG I applied ML to 1M+ Census records to surface income disparities and drive real equity recommendations. At SBU IT I built agentic AI workflows with GPT-4 and Claude to process 50,000+ service tickets. These aren't just technical projects — they're tools that changed how institutions make decisions.
+What I do best is own a system from design through production. At SBU IT I architected and shipped an agentic LLM pipeline processing 50,000+ service tickets, and I designed the reasoning chain, the PostgreSQL data layer, and the reporting surface myself. At KPMG I built ML pipelines on 1M+ Census records across S3, DynamoDB, and Elasticsearch, taking them from raw ingestion through model training to policy recommendations that reached real decision makers. I built ScaleForge on my own, designing a publish-subscribe event architecture connecting independent simulation engines, because I wanted to understand distributed system design by making every call myself.
 
 I'm a GHC Scholar, a WISE honoree, and a two-time Dean's List recipient. I'm also fluent in Bengali, Hindi, Urdu, and English, which shapes how I think about cross-cultural communication in both design and product.`,
   email: "tahsin.shrestha@stonybrook.edu",
   github: "https://github.com/Tshrestha-1114",
   linkedin: "https://linkedin.com/in/tahsin-nayeem-shrestha",
   resume: "/resume.pdf",
-  location: "Stony Brook, NY",
+  location: "Brooklyn, NY · New York City",
   profileImage: "https://raw.githubusercontent.com/Tshrestha-1114/tahsin-portfolio/main/Profile.jpg",
 };
 
 export const education = [
   {
     school: "Stony Brook University",
-    degree: "B.S. in Information Systems Engineering",
+    degree: "B.S. in Information Systems Engineering (Completed May 2026)",
     minor: "Minor in Studio Arts · Specialization: Financial System Management",
     years: "Jan 2022 – May 2026",
     gpa: "",
@@ -64,6 +64,16 @@ export const skills = {
   Languages: ["Python", "JavaScript", "R", "Java", "Bash", "C", "Ruby"],
   Frontend: ["React.js", "HTML/CSS", "Next.js"],
   Backend: ["Node.js", "Django", "REST APIs", "Cloudflare Workers", "Microservices"],
+  "Systems & Architecture": [
+    "System Design",
+    "End-to-End Ownership",
+    "Event-Driven Architecture",
+    "Publish-Subscribe Patterns",
+    "Distributed Systems",
+    "API Design",
+    "Serverless & Edge Computing",
+    "Schema & ERD Design",
+  ],
   "AI / ML": [
     "GPT-4",
     "Claude API",
@@ -190,8 +200,30 @@ export const projects = [
     ],
     architecture:
       "Raw ticket text ingested from TDX → preprocessing → GPT-4/Claude agentic reasoning chain (classify, summarize, detect anomalies) → structured output to PostgreSQL → reporting layer.",
-    github: "https://github.com/Tshrestha-1114",
+    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
     demo: null,
+    featured: true,
+  },
+  {
+    slug: "scaleforge",
+    title: "ScaleForge",
+    tagline: "Interactive distributed systems platform where you play the on-call engineer",
+    category: ["Systems", "Full Stack"],
+    problem:
+      "System design is usually taught through videos and static diagrams, so learners never feel the consequences of a bad architectural decision until they hit production.",
+    solution:
+      "Built a six-stage learning loop: read the concept, watch a live simulation, diagnose a production incident, choose an intervention under pressure, defend the reasoning in a Socratic AI interview, then unlock the next module. Wrong choices visibly degrade the simulated system in real time as error rates and latency spike and dashboards turn red.",
+    tech: ["JavaScript", "Three.js", "Cloudflare Pages", "Event-Driven Architecture", "Distributed Systems"],
+    impact: [
+      "Architected and built solo, including every design, simulation, and interaction decision",
+      "Publish-subscribe event bus connecting independent simulation engines with no direct coupling",
+      "Three.js 3D node graph rendering animated packet flow across cache, CDN, load balancer, and database nodes",
+      "Modules covering caching, CDNs, and load balancing with deep dives on Netflix, Uber, and Discord",
+    ],
+    architecture:
+      "Native ES modules with no build toolchain → publish-subscribe event bus → independent simulation engines (incident simulator, metrics, 3D visualization) subscribing to a shared event stream → rule-based AI mentor with keyword scoring → deployed as a static site on Cloudflare Pages.",
+    github: "https://github.com/Tshrestha-1114/Scaleforge",
+    demo: "https://scaleforge-83v.pages.dev/",
     featured: true,
   },
   {
@@ -211,7 +243,7 @@ export const projects = [
     ],
     architecture:
       "Census data in S3 → ETL with Pandas → model training (regression, RF, NN) → predictions indexed to Elasticsearch → recommendations report to KPMG policy team.",
-    github: "https://github.com/Tshrestha-1114",
+    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
     demo: null,
     featured: true,
   },
@@ -231,27 +263,28 @@ export const projects = [
     ],
     architecture:
       "Data pipeline scrapes job listings and course catalogs → feature engineering → skill gap model → MongoDB storage → web interface for student queries.",
-    github: "https://github.com/Tshrestha-1114",
+    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
     demo: null,
     featured: true,
   },
   {
     slug: "edge-analytics-platform",
-    title: "Edge Analytics Platform",
-    tagline: "Serverless edge app using Cloudflare Workers for developer collaboration data",
+    title: "Edge Ticket Aggregator & Analyzer",
+    tagline: "Serverless support-ticket analytics running entirely on Cloudflare Workers",
     category: ["Backend", "Systems"],
     problem:
-      "Traditional server-based analytics introduce latency and scaling costs.",
+      "Traditional server-based analytics introduce latency and scaling costs, and standing up a backend just to aggregate ticket data from a handful of REST endpoints is more infrastructure than the problem deserves.",
     solution:
-      "Built a serverless edge analytics application using Cloudflare Workers to aggregate and process developer collaboration data from distributed sources, with REST API integrations and custom data pipelines in JavaScript.",
+      "Built a support-ticket aggregation and analysis tool that pulls ticket data through REST APIs and processes it entirely at the edge using Cloudflare Workers, with no traditional backend. Surfaces patterns in ticket volume and response times.",
     tech: ["Cloudflare Workers", "JavaScript", "REST APIs", "Serverless"],
     impact: [
-      "Sub-50ms P95 latency at the edge without server provisioning",
+      "Runs with no server provisioning or backend infrastructure to maintain",
       "Demonstrated serverless-first architecture for distributed data aggregation",
+      "Built to understand low-latency edge processing by owning the architecture end to end",
     ],
     architecture:
-      "Distributed data sources → REST API integrations → Cloudflare Workers processing at edge → aggregated output → low-latency response to clients.",
-    github: "https://github.com/Tshrestha-1114",
+      "External ticket sources → REST API integrations → Cloudflare Workers processing at the edge → aggregation and pattern analysis → low-latency response to clients.",
+    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
     demo: null,
     featured: false,
   },
@@ -272,7 +305,7 @@ export const projects = [
     ],
     architecture:
       "Transaction data → MySQL with complex SQL queries for rule-based flagging → ML model layer for pattern detection → alert system → monitoring dashboard.",
-    github: "https://github.com/Tshrestha-1114",
+    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
     demo: null,
     featured: true,
   },
@@ -292,7 +325,7 @@ export const projects = [
     ],
     architecture:
       "PCAP file ingestion → packet parsing → flow extraction → per-protocol stat computation → report output.",
-    github: "https://github.com/Tshrestha-1114",
+    github: "https://github.com/Tshrestha-1114/REPLACE-REPO-NAME",
     demo: null,
     featured: false,
   },
